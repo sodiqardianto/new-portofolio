@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        "spin-slow": "spin 6s linear infinite",
+      },
       fontFamily: {
         mont: 'var(--font-mont)'
       },

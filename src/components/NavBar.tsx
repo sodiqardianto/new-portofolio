@@ -49,7 +49,7 @@ export default function NavBar() {
   const pathname = usePathname();
 
   return (
-    <header className="w-full px-32 py-8 font-medium items-center flex justify-between">
+    <header className="w-full px-32 py-8 font-medium items-center flex justify-between absolute">
       <nav>
         {navData?.map((link, index) => {
           return (
@@ -74,7 +74,7 @@ export default function NavBar() {
               href={item.path}
               target={"_blank"}
               key={index}
-              className="mr-3 hover:-translate-y-1 text-[24px] "
+              className="mr-3 hover:-translate-y-1 text-[24px]"
             >
               {item.icon}
             </Link>
