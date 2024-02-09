@@ -49,7 +49,7 @@ export default function NavBar() {
   const pathname = usePathname();
 
   return (
-    <header className="w-full px-32 py-8 font-medium items-center flex justify-between absolute">
+    <header className="w-full px-32 py-8 font-medium items-center flex justify-between z-10 fixed">
       <nav>
         {navData?.map((link, index) => {
           return (
