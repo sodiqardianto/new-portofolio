@@ -13,7 +13,7 @@ export default function Skills() {
       </div>
       <div className="w-full flex flex-wrap gap-8 justify-center ">
         <div className="border border-dark shadow-lg rounded-3xl p-10 max-w-lg relative bg-light">
-          <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
+          <div className="absolute top-1 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
           <h2 className="text-3xl font-semibold mb-10 text-center">
             Front End
           </h2>

@@ -24,8 +24,8 @@ export default function About() {
       </Head>
       <main className="flex w-full flex-col items-center justify-center">
         <Layout className="pt-36">
-          <AnimatedText text="Passion Fuels Purpose!" className="mb-16" />
-          <div className="grid w-full grid-cols-8 gap-16">
+          <AnimatedText text="Passion Fuels Purpose!" className="" />
+          <div className="grid w-full grid-cols-8 gap-16 my-32">
             <div className="col-span-3 flex flex-col items-start justify-start">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
                 Biography
@@ -78,7 +78,6 @@ export default function About() {
           <Skills />
           <Experience />
           <Education />
-          <Footer />
         </Layout>
       </main>
     </>
