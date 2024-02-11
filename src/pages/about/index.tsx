@@ -1,4 +1,5 @@
 import AnimatedText from "@/components/AnimatedText";
+import Experience from "@/components/Experience";
 import Layout from "@/components/Layout";
 import Skills from "@/components/Skills";
 import Head from "next/head";
@@ -73,6 +74,7 @@ export default function About() {
             </div>
           </div>
           <Skills />
+          <Experience />
         </Layout>
       </main>
     </>
