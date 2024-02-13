@@ -1,15 +1,19 @@
 import React from "react";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 
-export default function Lilcon({ reference }: { reference: any }) {
-  const { scrollYProgress } = useScroll({
-    target: reference,
-    offset: ["center end", "center center"],
-  });
+interface LilconProps {
+  reference: React.Ref<HTMLDivElement>;
+}
 
+const Lilcon: React.FC<LilconProps> = ({ reference }) => {
   return (
     <figure className="absolute left-0 stroke-dark dark:stroke-light">
-      <svg width={75} height={75} viewBox="0 0 100 100" className="-rotate-90">
+      <svg
+        width={75}
+        height={75}
+        viewBox="0 0 100 100"
+        className="-rotate-90 md:w-[60px] md:h-[60px] xs:w-[40px] xs:h-[40px]"
+      >
         <circle
           cx={75}
           cy={50}
@@ -20,8 +24,8 @@ export default function Lilcon({ reference }: { reference: any }) {
           cx={75}
           cy={50}
           r={20}
-          style={{ pathLength: scrollYProgress }}
-          className=" stroke-[5px] fill-light dark:fill-dark"
+          style={{ pathLength: 0 }} // Placeholder for scrollYProgress
+          className="stroke-[5px] fill-light dark:fill-dark"
         />
         <circle
           cx={75}
@@ -32,4 +36,6 @@ export default function Lilcon({ reference }: { reference: any }) {
       </svg>
     </figure>
   );
-}
+};
+
+export default Lilcon;
