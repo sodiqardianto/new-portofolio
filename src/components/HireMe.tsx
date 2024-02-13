@@ -12,11 +12,11 @@ export default function HireMe() {
           width={300}
           height={300}
           priority={true}
-          className="animate-spin-slow"
+          className="animate-spin-slow fill-dark dark:fill-light"
         />
         <Link
           href={"mailto:sodiqardianto@gmail.com"}
-          className="flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark text-light shadow-md border border-solid border-dark w-20 h-20 rounded-full font-semibold hover:bg-light hover:text-dark"
+          className="flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark text-light shadow-md border border-solid border-dark w-20 h-20 rounded-full font-semibold hover:bg-light hover:text-dark dark:bg-light dark:text-dark dark:border-light hover:dark:bg-dark hover:dark:text-light"
         >
           Hire Me
         </Link>

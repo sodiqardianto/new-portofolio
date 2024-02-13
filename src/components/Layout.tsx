@@ -9,7 +9,7 @@ export default function Layout({
 }) {
   return (
     <div
-      className={`w-full h-full inline-block z-0 bg-light px-32 pt-24 ${className}`}
+      className={`w-full h-full inline-block z-0 bg-light px-32 pt-24 dark:bg-dark ${className}`}
     >
       {children}
     </div>
