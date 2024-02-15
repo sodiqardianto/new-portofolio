@@ -23,27 +23,27 @@ const navData = [
 const navIcon = [
   {
     name: "Instagram",
-    path: "/instagram",
+    path: "https://www.instagram.com/sodiqardianto/",
     icon: <FaInstagram />,
   },
   {
     name: "Facebook",
-    path: "/",
+    path: "https://www.facebook.com/sodiqardianto.wk/",
     icon: <FaFacebookF />,
   },
   {
     name: "Twitter",
-    path: "/twitter",
+    path: "https://twitter.com/sodiqardianto",
     icon: <FaXTwitter />,
   },
   {
     name: "LinkedIn",
-    path: "/linkedin",
+    path: "https://www.linkedin.com/in/sodiqardianto/",
     icon: <FaLinkedin />,
   },
   {
     name: "Github",
-    path: "/github",
+    path: "https://github.com/sodiqardianto",
     icon: <FaGithub />,
   },
 ];
@@ -59,9 +59,7 @@ export default function NavBar() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 1021) {
-        setIsOpen(false);
-      }
+      window.innerWidth >= 1021;
     };
 
     window.addEventListener("resize", handleResize);
@@ -69,27 +67,29 @@ export default function NavBar() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); // Menjalankan efek hanya sekali saat komponen dipasang
+  }, []);
 
   return (
-    <header className="w-full px-32 py-8 font-medium items-center flex justify-between z-10 fixed dark:text-light">
+    <header
+      className={`w-full px-32 py-8 font-medium items-center flex justify-between z-10 fixed dark:text-light`}
+    >
       {/* BURGER BUTTON */}
       <button
-        className="hidden lg:flex flex-col justify-center items-center"
+        className="hidden lg:flex flex-col justify-center items-center bg-dark p-2 rounded-lg dark:bglig"
         onClick={handleClick}
       >
         <span
-          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+          className={`bg-light dark:bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
             isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
           }`}
         ></span>
         <span
-          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
+          className={`bg-light dark:bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
             isOpen ? "opacity-0" : "opacity-100"
           }`}
         ></span>
         <span
-          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+          className={`bg-light dark:bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
             isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
           }`}
         ></span>

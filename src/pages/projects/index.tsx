@@ -6,6 +6,8 @@ import Link from "next/link";
 import React from "react";
 import { FaGithub } from "react-icons/fa6";
 
+const projects = [];
+
 export default function Projects() {
   return (
     <>
@@ -16,10 +18,10 @@ export default function Projects() {
       <main className="w-full flex flex-col items-center justify-center overflow-hidden mb-16 text-dark dark:text-light">
         <Layout className="pt-36">
           <AnimatedText
-            text="Imagination Trumps Knowledge!"
+            text="The project has not been prepared yet, please come another time."
             className="lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
-          <div className="grid grid-cols-12 gap-24 my-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+          {/* <div className="grid grid-cols-12 gap-24 my-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <article className="w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 rounded-br-2xl relative dark:border-light dark:bg-dark lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4">
                 <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark rounded-br-3xl dark:bg-light" />
@@ -167,7 +169,7 @@ export default function Projects() {
                 </div>
               </article>
             </div>
-          </div>
+          </div> */}
         </Layout>
       </main>
     </>

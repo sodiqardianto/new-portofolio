@@ -9,9 +9,9 @@ import React from "react";
 import CountUp from "react-countup";
 
 const statistics = [
-  { end: 50, label: "Satisfied Clients" },
-  { end: 40, label: "Projects Completed" },
-  { end: 4, label: "Years of Experience" },
+  { end: 12, label: "Satisfied Clients" },
+  { end: 10, label: "Projects Completed" },
+  { end: 3, label: "Years of Experience" },
 ];
 
 export default function About() {
@@ -24,7 +24,7 @@ export default function About() {
       <main className="w-full flex flex-col items-center justify-center overflow-hidden mb-16 text-dark dark:text-light">
         <Layout className="pt-36">
           <AnimatedText
-            text="Passion Fuels Purpose!"
+            text="Always learn & develop!"
             className="lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
           <div className="grid w-full grid-cols-8 gap-16 my-32 sm:gap-8">
@@ -33,28 +33,28 @@ export default function About() {
                 Biography
               </h2>
               <p className="font-medium">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Tempora quam perferendis consequuntur voluptatem voluptate iusto
-                vitae quibusdam odio deleniti aperiam expedita facere minima,
-                iure architecto qui, minus sint quos laudantium?
+                Hi, I&apos;m Sodiq Ardianto, a Fullstack Developer with 3 years
+                of experience and always enthusiastic about learning new things.
+                I am a graduate of Raharja University, majoring in Information
+                Engineering with a concentration in Software Engineering, and
+                graduated in 2020.
               </p>
               <p className="font-medium my-4">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae
-                nemo iusto labore corrupti ad numquam corporis, placeat dolores
-                possimus obcaecati enim aperiam ea doloribus mollitia incidunt
-                adipisci. Numquam, alias rerum?
+                I am quite proficient in frontend and backend, and have
+                successfully completed various projects with the best results.
               </p>
               <p className="font-medium">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum
-                minima natus laboriosam quod, eaque aut dicta saepe blanditiis
-                deleniti, inventore temporibus reiciendis, quo eum odio illo ab
-                impedit id porro.
+                I have the ability to work independently or in a team, and am
+                always eager to contribute to the development of useful
+                projects. I am confident that I can be a valuable asset to your
+                team and ready to build a successful career in technology and
+                provide the best solutions for your needs.
               </p>
             </div>
             <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light xl:col-span-4 md:order-1 md:col-span-8">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light" />
               <Image
-                src="/images/developer-pic-2.jpg"
+                src="/images/pic.png"
                 alt="Photo Profile"
                 width={500}
                 height={500}

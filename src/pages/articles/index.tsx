@@ -16,10 +16,10 @@ export default function Articles() {
       <main className="w-full flex flex-col items-center justify-center overflow-hidden mb-16 text-dark dark:text-light">
         <Layout className="pt-36">
           <AnimatedText
-            text="Word Can Change the World!"
+            text="No articles have been created yet, please come another time."
             className="lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
-          <ul className="grid grid-cols-2 gap-16 my-32 md:grid-cols-1 lg:gap-8 md:gap-y-16">
+          {/* <ul className="grid grid-cols-2 gap-16 my-32 md:grid-cols-1 lg:gap-8 md:gap-y-16">
             <li className="col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl relative dark:bg-dark dark:border-light">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark rounded-br-3xl dark:bg-light" />
               <Link
@@ -86,8 +86,8 @@ export default function Articles() {
                 9 min read
               </span>
             </li>
-          </ul>
-          <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
+          </ul> */}
+          {/* <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
             All Articles
           </h2>
           <ul>
@@ -163,7 +163,7 @@ export default function Articles() {
                 March 22, 2023
               </span>
             </motion.li>
-          </ul>
+          </ul> */}
         </Layout>
       </main>
     </>

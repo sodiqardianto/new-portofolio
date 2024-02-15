@@ -18,7 +18,7 @@ export default function Home() {
           <div className="flex items-center justify-between w-full lg:flex-col">
             <div className="w-1/2 md:w-full">
               <Image
-                src="/images/developer-pic-1.png"
+                src="/images/pic-1.png"
                 alt="logo"
                 width={500}
                 height={500}
@@ -30,14 +30,13 @@ export default function Home() {
             </div>
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text="Turning Vision Into Reality With Code and Design"
+                text="The only way to do great work is to love what you do."
                 className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere
-                maiores vel dolores eligendi accusamus modi ullam nihil hic, rem
-                ut iste esse, maxime deserunt eaque magnam? Molestias
-                exercitationem consequatur dolores!
+                As a skilled full-stack developer, I aim to create interactive
+                and innovative websites. Explore my latest projects and
+                articles, showcasing my web development skills.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
