@@ -17,7 +17,7 @@ export default function Articles() {
         <Layout className="pt-36">
           <AnimatedText
             text="No articles have been created yet, please come another time."
-            className="lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
+            className="lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8 sm:pt-20"
           />
           {/* <ul className="grid grid-cols-2 gap-16 my-32 md:grid-cols-1 lg:gap-8 md:gap-y-16">
             <li className="col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl relative dark:bg-dark dark:border-light">

@@ -19,7 +19,7 @@ export default function Projects() {
         <Layout className="pt-36">
           <AnimatedText
             text="The project has not been prepared yet, please come another time."
-            className="lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
+            className="lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8 sm:pt-20"
           />
           {/* <div className="grid grid-cols-12 gap-24 my-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">

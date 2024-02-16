@@ -23,13 +23,13 @@ export default function Footer() {
             Sodiq Ardianto
           </Link>
         </div>
-        <Link
+        {/* <Link
           href={"/"}
           className="underline underline-offset-2 text-dark dark:text-light"
           target="_blank"
         >
           Say hello
-        </Link>
+        </Link> */}
       </Layout>
     </footer>
   );

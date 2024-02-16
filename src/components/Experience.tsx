@@ -48,8 +48,8 @@ export default function Experience() {
     offset: ["start end", "center start"],
   });
   return (
-    <div className="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
+      <>
+      <h2 className="font-bold text-8xl mt-32 w-full text-center mb-10 md:text-6xl xs:text-4xl md:mb-16 sm:mb-8 sm:mt-32">
         Experience
       </h2>
       <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
@@ -91,6 +91,6 @@ export default function Experience() {
           ))}
         </ul>
       </div>
-    </div>
+      </>
   );
 }

@@ -52,6 +52,7 @@ export default function NavBar() {
   const pathname = usePathname();
   const [mode, setMode] = useThemeSwitcher();
   const [isOpen, setIsOpen] = useState(false);
+  const [isBlured, setIsBlurred] = useState(true);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -59,7 +60,12 @@ export default function NavBar() {
 
   useEffect(() => {
     const handleResize = () => {
-      window.innerWidth >= 1021;
+      if (window.innerWidth <= 1021) {
+        setIsOpen(false);
+        setIsBlurred(false);
+      } else {
+        setIsBlurred(true);
+      }
     };
 
     window.addEventListener("resize", handleResize);
@@ -71,11 +77,13 @@ export default function NavBar() {
 
   return (
     <header
-      className={`w-full px-32 py-8 font-medium items-center flex justify-between z-10 fixed dark:text-light`}
+      className={`w-full px-32 py-8 font-medium items-center flex justify-between z-10 fixed dark:text-light ${
+        isBlured ? "backdrop-blur-md" : ""
+      }`}
     >
       {/* BURGER BUTTON */}
       <button
-        className="hidden lg:flex flex-col justify-center items-center bg-dark p-2 rounded-lg dark:bglig"
+        className="hidden lg:flex flex-col justify-center items-center bg-dark p-3 rounded-lg dark:bg-light lg:right-14 lg:-bottom-[800px] lg:top-auto lg:absolute"
         onClick={handleClick}
       >
         <span

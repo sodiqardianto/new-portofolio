@@ -143,7 +143,7 @@ export const skills = [
 export default function Skills() {
   return (
     <>
-      <h2 className="font-bold text-8xl mt-64 w-full text-center mb-10 md:text-6xl xs:text-4xl md:mb-16 sm:mb-8">
+      <h2 className="font-bold text-8xl mt-32 w-full text-center mb-10 md:text-6xl xs:text-4xl md:mb-16 sm:mb-8 sm:mt-28">
         Skills
       </h2>
       <div className="flex flex-col justify-center text-lg font-semibold text-center mx-96 xl:mx-48 lg:mx-24 sm:mx-0 sm:text-sm mb-14 text-dark dark:text-light">
@@ -154,7 +154,7 @@ export default function Skills() {
         {skills.map((skill, index) => {
           return (
             <div
-              className="border border-dark shadow-lg rounded-3xl p-10 max-w-lg relative bg-light dark:border-light dark:bg-dark"
+              className="border border-dark shadow-lg rounded-3xl p-10 max-w-lg relative my-3 bg-light dark:border-light dark:bg-dark"
               key={index}
             >
               <div className="absolute top-1 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
