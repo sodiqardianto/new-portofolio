@@ -164,7 +164,7 @@ export default function Skills() {
               <div className="flex justify-center flex-wrap gap-3">
                 {skill.skills.map((itemSkill, index) => (
                   <div
-                    className="font-semibold text-dark flex items-center justify-center border border-dark rounded-2xl p-3 gap-2 dark:text-light dark:border-light"
+                    className="font-semibold text-dark flex items-center justify-center border border-dark rounded-2xl p-3 gap-2 dark:text-light dark:border-light sm:p-2 sm:text-sm"
                     key={index}
                   >
                     <Image

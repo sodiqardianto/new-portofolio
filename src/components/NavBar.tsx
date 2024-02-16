@@ -52,7 +52,7 @@ export default function NavBar() {
   const pathname = usePathname();
   const [mode, setMode] = useThemeSwitcher();
   const [isOpen, setIsOpen] = useState(false);
-  const [isBlured, setIsBlurred] = useState(true);
+  const [isBlurred, setIsBlurred] = useState(true);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -76,85 +76,7 @@ export default function NavBar() {
   }, []);
 
   return (
-    <header
-      className={`w-full px-32 py-8 font-medium items-center flex justify-between z-10 fixed dark:text-light ${
-        isBlured ? "backdrop-blur-md" : ""
-      }`}
-    >
-      {/* BURGER BUTTON */}
-      <button
-        className="hidden lg:flex flex-col justify-center items-center bg-dark p-3 rounded-lg dark:bg-light lg:right-14 lg:-bottom-[800px] lg:top-auto lg:absolute"
-        onClick={handleClick}
-      >
-        <span
-          className={`bg-light dark:bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
-            isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
-          }`}
-        ></span>
-        <span
-          className={`bg-light dark:bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
-            isOpen ? "opacity-0" : "opacity-100"
-          }`}
-        ></span>
-        <span
-          className={`bg-light dark:bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
-            isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
-          }`}
-        ></span>
-      </button>
-      {/* BURGER BUTTON */}
-
-      <div className="w-full flex justify-between items-center lg:hidden">
-        <nav>
-          {navData?.map((link, index) => {
-            return (
-              <Link
-                key={index}
-                href={link.path}
-                className="relative group mr-10"
-              >
-                {link.name}
-                <span
-                  className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
-                    pathname === link.path ? "w-full" : "w-0"
-                  } dark:bg-light`}
-                ></span>
-              </Link>
-            );
-          })}
-        </nav>
-        <nav className="flex items-center justify-center flex-wrap">
-          {navIcon.map((item, index) => {
-            return (
-              <Link
-                href={item.path}
-                target={"_blank"}
-                key={index}
-                className="mr-3 hover:-translate-y-1 text-[24px]"
-              >
-                {item.icon}
-              </Link>
-            );
-          })}
-          <button
-            onClick={() => {
-              if (typeof setMode === "function") {
-                setMode(mode === "light" ? "dark" : "light");
-              }
-            }}
-            className={`flex items-center justify-center rounded-full ${
-              mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
-            }`}
-          >
-            {mode === "dark" ? (
-              <SunIcon className="fill-dark" />
-            ) : (
-              <MoonIcon className="fill-dark" />
-            )}
-          </button>
-        </nav>
-      </div>
-
+    <>
       {/* MOBILE MENU */}
       {isOpen ? (
         <motion.div
@@ -217,9 +139,85 @@ export default function NavBar() {
       )}
       {/* MOBILE MENU */}
 
-      {/* <div className="absolute left-[50%] top-2 translate-x-[-50%]">
-        <Logo />
-      </div> */}
-    </header>
+      <header
+        className={`w-full px-32 py-8 font-medium items-center flex justify-between z-10 fixed dark:text-light ${
+          isBlurred ? "backdrop-blur-md" : ""
+        }`}
+      >
+        {/* BURGER BUTTON */}
+        <button
+          className="hidden lg:flex flex-col justify-center items-center bg-dark p-3 rounded-lg dark:bg-light lg:left-0 lg:ml-8 lg:-bottom-0 lg:top-auto lg:absolute"
+          onClick={handleClick}
+        >
+          <span
+            className={`bg-light dark:bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+              isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
+            }`}
+          ></span>
+          <span
+            className={`bg-light dark:bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
+              isOpen ? "opacity-0" : "opacity-100"
+            }`}
+          ></span>
+          <span
+            className={`bg-light dark:bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+              isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
+            }`}
+          ></span>
+        </button>
+        {/* BURGER BUTTON */}
+
+        <div className="w-full flex justify-between items-center lg:hidden">
+          <nav>
+            {navData?.map((link, index) => {
+              return (
+                <Link
+                  key={index}
+                  href={link.path}
+                  className="relative group mr-10"
+                >
+                  {link.name}
+                  <span
+                    className={`h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
+                      pathname === link.path ? "w-full" : "w-0"
+                    } dark:bg-light`}
+                  ></span>
+                </Link>
+              );
+            })}
+          </nav>
+          <nav className="flex items-center justify-center flex-wrap">
+            {navIcon.map((item, index) => {
+              return (
+                <Link
+                  href={item.path}
+                  target={"_blank"}
+                  key={index}
+                  className="mr-3 hover:-translate-y-1 text-[24px]"
+                >
+                  {item.icon}
+                </Link>
+              );
+            })}
+            <button
+              onClick={() => {
+                if (typeof setMode === "function") {
+                  setMode(mode === "light" ? "dark" : "light");
+                }
+              }}
+              className={`flex items-center justify-center rounded-full ${
+                mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+              }`}
+            >
+              {mode === "dark" ? (
+                <SunIcon className="fill-dark" />
+              ) : (
+                <MoonIcon className="fill-dark" />
+              )}
+            </button>
+          </nav>
+        </div>
+      </header>
+    </>
   );
 }
