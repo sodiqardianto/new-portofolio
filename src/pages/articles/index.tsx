@@ -1,9 +1,9 @@
 import AnimatedText from "@/components/AnimatedText";
 import Layout from "@/components/Layout";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
+// import Image from "next/image";
+// import Link from "next/link";
 import React from "react";
 
 export default function Articles() {

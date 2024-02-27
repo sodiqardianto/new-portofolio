@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import Logo from "./Logo";
 import { usePathname } from "next/navigation";
 import {
   FaFacebookF,
