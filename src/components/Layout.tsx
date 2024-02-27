@@ -1,5 +1,4 @@
 import React from "react";
-import Transition from "./Transition";
 
 export default function Layout({
   children,
