@@ -51,27 +51,13 @@ export default function NavBar() {
   const pathname = usePathname();
   const [mode, setMode] = useThemeSwitcher();
   const [isOpen, setIsOpen] = useState(false);
-  const [isBlurred, setIsBlurred] = useState(true);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 1021) {
         setIsOpen(false);
-        setIsBlurred(false);
-      } else {
-        setIsBlurred(true);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
   }, []);
 
   return (
@@ -139,9 +125,7 @@ export default function NavBar() {
       {/* MOBILE MENU */}
 
       <header
-        className={`w-full px-32 py-8 font-medium items-center flex justify-between z-10 fixed dark:text-light ${
-          isBlurred ? "backdrop-blur-md" : ""
-        }`}
+        className={`w-full px-32 py-8 font-medium items-center flex justify-between z-10 fixed dark:text-light backdrop-blur-md md:backdrop-filter-none`}
       >
         {/* BURGER BUTTON */}
         <button

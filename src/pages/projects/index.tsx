@@ -20,8 +20,7 @@ export default function Projects() {
           Accept: "application/json",
           // Authorization:
           //   "Bearer 1|AVsdWiFLK5WQfbJox4Gb7ZKsyTMiapC26MTG8o4V4dc125bf",
-          Authorization:
-            "Bearer 2|UXOoidCi441w2w0fySWWnjJcrisjqdugLkSG5UAh712ff7f6",
+          Authorization: process.env.NEXT_PUBLIC_API_TOKEN
         },
       });
       const getData = projectReponse.data.data;
@@ -35,16 +34,37 @@ export default function Projects() {
     fetchProjects();
   }, []);
 
-  const featuredProjects = projects.filter(
-    (project) => project.category === "Featured Project"
-  );
-  const otherProjects = projects.filter(
-    (project) => project.category !== "Featured Project"
-  );
+  // const featuredProjects = projects.filter(
+  //   (project) => project.category === "Featured Project"
+  // );
+  // const otherProjects = projects.filter(
+  //   (project) => project.category !== "Featured Project"
+  // );
 
-  // Combine featured projects at the beginning
-  const combinedProjects = [...featuredProjects, ...otherProjects];
+  // const combinedProjects = [...featuredProjects, ...otherProjects];
 
+
+  // NEW BAWAH
+  // Memisahkan proyek menjadi dua kelompok: Featured Project dan Non-Featured Project
+// const featuredProjects = projects.filter(project => project.category === "Featured Project");
+// const nonFeaturedProjects = projects.filter(project => project.category !== "Featured Project");
+
+// // Menyiapkan array untuk proyek yang akan ditampilkan
+// const displayedProjects = [];
+
+// // Menyusun tampilan dengan menggabungkan setiap dua Featured Project dengan empat Non-Featured Project
+// for (let i = 0; i < featuredProjects.length; i += 2) {
+//   // Menambahkan dua Featured Project ke array tampilan
+//   displayedProjects.push(featuredProjects[i]);
+//   if (featuredProjects[i + 1]) {
+//     displayedProjects.push(featuredProjects[i + 1]);
+//   }
+
+//   // Menambahkan empat Non-Featured Project ke array tampilan
+//   for (let j = 0; j < 4 && nonFeaturedProjects.length > 0; j++) {
+//     displayedProjects.push(nonFeaturedProjects.shift());
+//   }
+// }
   return (
     <>
       <Head>
@@ -58,7 +78,7 @@ export default function Projects() {
             className="lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8 sm:pt-20"
           />
           <div className="grid grid-cols-12 gap-24 my-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
-            {combinedProjects.map((project, index) => (
+            {projects.sort((a, b) => a.id - b.id).map((project, index) => (
               <>
                 {project.category == "Featured Project" ? (
                   <div className="col-span-12" key={index}>

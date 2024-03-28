@@ -19,7 +19,7 @@ export default function Home() {
             <div className="w-1/2 md:w-full">
               <Image
                 src="/images/pic-1.png"
-                alt="logo"
+                alt="Picture of Sodiq"
                 width={500}
                 height={500}
                 className="w-full h-auto lg:hidden md:inline-block md:w-full"
